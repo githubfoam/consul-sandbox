@@ -15,13 +15,7 @@ echo "==========================================================================
 vagrant box add "bento/centos-7.6" --provider=virtualbox
 vagrant mutate "bento/centos-7.6" libvirt
 
-# vagrant up --provider=libvirt
-vagrant up --provider=libvirt vagrant-consul-01
-vagrant up --provider=libvirt vagrant-consul-02
-vagrant up --provider=libvirt vagrant-consul-03
-vagrant up --provider=libvirt vagrant-remotecontrol01
-
-vagrant ssh vagrant-remotecontrol01 -c "sudo ansible-playbook -i /vagrant/provisioning/hosts /vagrant/provisioning/00_initial.yml"
+vagrant up --provider=libvirt
 
 # Ansible provision OK
 #https://github.com/chef/bento/tree/master/packer_templates/centos
