@@ -16,9 +16,12 @@ echo "==========================================================================
 # vagrant mutate "bento/centos-7.6" libvirt
 # vagrant up --provider=libvirt
 
-# #https://github.com/chef/bento/tree/master/packer_templates/centos
+# https://github.com/chef/bento/tree/master/packer_templates/centos
+# vagrant box add "bento/centos-8.2" --provider=virtualbox
+# vagrant mutate "bento/centos-8.2" libvirt
+# vagrant up --provider=libvirt --no-parallel
+
 vagrant box add "centos/8" --provider=virtualbox
-vagrant mutate "centos/8" libvirt
 vagrant up --provider=libvirt --no-parallel
 
 
