@@ -4,7 +4,8 @@
   hosts: consulcluster
   become: yes
   vars:
-    VER: "1.5.3"
+    VER: "1.8.0"
+    # VER: "1.5.3"
     # ansible_python_interpreter: "/usr/bin/python3" # only debian not redhat
   tasks:
     - name: "Add Debian commons"
