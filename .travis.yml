@@ -8,7 +8,7 @@ matrix:
   fast_finish: true
   include:
 
-    - name: "build consul - bionic"
+    - name: "build consul bionic"
       dist: bionic
       language: python
       python: 3.7
@@ -19,6 +19,22 @@ matrix:
         - pip install -r requirements.txt
       script:
         - cd consul-sandbox && sudo make deploy-libvirt
+        - sudo make deploy-vagrant
+        - sudo make deploy-boxes
+      after_success:
+        - deactivate
+
+    - name: "build consul registrator docker bionic"
+      dist: bionic
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - cd consul-registrator-docker-box && sudo make deploy-libvirt
         - sudo make deploy-vagrant
         - sudo make deploy-boxes
       after_success:
