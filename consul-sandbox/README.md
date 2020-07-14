@@ -1,10 +1,6 @@
 
 # consul sandbox
 
-[![matrixci](https://github.com/githubfoam/consul-sandbox/consul-sandbox/workflows/matrixci/badge.svg)](https://github.com/githubfoam/consul-sandbox/consul-sandbox/actions?query=workflow%3A%22matrixci%22+branch%3Adev)
-
-[![ci](https://github.com/githubfoam/consul-sandbox/consul-sandbox/workflows/ci/badge.svg)](https://github.com/githubfoam/consul-sandbox/actions?query=workflow%3A%22ci%22+branch%3Adev)
-
 manual deployment (remote key distribution)
 ~~~~
 vagrant up

@@ -1,4 +1,4 @@
-# docker deployment; consul - registrator -  microservices
+# consul - registrator -  docker - microservices
 
 ~~~~
 run in the background without UI
